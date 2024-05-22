@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import UpdateDay from "./UpdateDay.js";
+import WeatherIcon from "./WeatherIcon.js";
+import WeatherDetails from "./WeatherDetails.js";
 
 export default function Weather() {
-  let [city, setCity] = useState("");
+  const [city, setCity] = useState("Johannesburg");
   let [weather, setWeather] = useState({});
   let [loaded, setLoaded] = useState(false);
 
@@ -14,11 +16,13 @@ export default function Weather() {
   function showDetails(response) {
     setLoaded(true);
     setWeather({
+      city: response.data.name,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
+      icon: response.data.weather[0].icon,
     });
   }
   function handleSubmit(event) {
@@ -33,8 +37,8 @@ export default function Weather() {
         <div className="col-sm-9 ">
           <input
             type="search"
-            placeholder="Enter your city name"
-            autoFocus
+            placeholder="Enter your city"
+            autoFocus="on"
             onChange={updateCity}
           />
         </div>
@@ -47,34 +51,9 @@ export default function Weather() {
     </form>
   );
   if (loaded) {
-    return (
-      <div>
-        {form}
-        <div className="details mb-5 d-flex justify-content-between">
-          <div className="cityDetails text-capitalize">
-            <h1 class="mb-0">{city}</h1>
-            <ul>
-              <li>
-                <UpdateDay date={weather.date} />
-              </li>
-              <li>{weather.description}</li>
-            </ul>
-          </div>
-          <div className="temperature ">
-            <div>
-              <ul className="pt-4">
-                <li>Wind: {Math.round(weather.wind)}km/hr</li>
-                <li> Humidity: {Math.round(weather.humidity)}%</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="d-flex justify-content-end">
-          <span className="temp">{Math.round(weather.temperature)}</span>
-          <span className="unit">℃</span>
-        </div>
-      </div>
-    );
+    return { form };
+    <WeatherDetails />;
+  } else {
+    <WeatherDetails />;
   }
-  return <div>{form}</div>;
 }
