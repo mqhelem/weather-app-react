@@ -51,9 +51,8 @@ export default function Weather() {
     </form>
   );
   if (loaded) {
-    return { form };
-    <WeatherDetails />;
+    return form, (<WeatherDetails />);
   } else {
-    <WeatherDetails />;
+    form;
   }
 }
