@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
         <footer>
           Coded by <a href="https://github.com/mqhelem"> Nomqhele Mhlanga, </a>
           source code hosted in
