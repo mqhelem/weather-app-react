@@ -21,7 +21,10 @@ export default function UpdateDate(props) {
   }
   return (
     <div>
-      {day} {hours}:{minutes}
+      {day}{" "}
+      <strong>
+        {hours}:{minutes}
+      </strong>
     </div>
   );
 }

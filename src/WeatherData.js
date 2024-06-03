@@ -1,7 +1,8 @@
 import React from "react";
 
 import UpdateDate from "./UpdateDate.js";
-
+import WeatherIcon from "./WeatherIcon.js";
+import WeatherTemperature from "./WeatherTemperature.js";
 export default function WeatherData(props) {
   return (
     <div className="row text-capitalize">
@@ -15,8 +16,12 @@ export default function WeatherData(props) {
         </p>
       </div>
       <div className="temperature col-sm-6 d-flex justify-content-end">
-        <span className="temp">{Math.round(props.info.temperature)}</span>
-        <span className="unit">℃ | ℉</span>
+        <span class="icon">
+          <WeatherIcon code={props.info.icon} size={50} color="#00204a" />
+        </span>
+        <span>
+          <WeatherTemperature celcius={props.info.temperature} />
+        </span>
       </div>
     </div>
   );
