@@ -1,0 +1,30 @@
+.Weather form {
+  border-bottom: 1px solid var(--secondary-color);
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+.Weather .btn.btn-primary {
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 10px;
+}
+.Weather .btn.btn-primary:hover {
+  background-color: white;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+.Weather input {
+  width: 75%;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+.temp {
+  font-size: 60px;
+  margin-left: 10px;
+}
+.unit {
+  font-size: 16px;
+  position: relative;
+  top: -30px;
+}
