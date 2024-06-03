@@ -9,12 +9,23 @@ function App() {
         <footer>
           Coded by <a href="https://github.com/mqhelem"> Nomqhele Mhlanga, </a>
           source code hosted in
-          <a href="https://github.com/mqhelem/weather-app-react">
+          <a
+            href="https://github.com/mqhelem/weather-app-react"
+            target="_blank"
+            rel="noreferrer"
+          >
             {" "}
             Github,
           </a>{" "}
           app available at
-          <a href="https://weatherfourcast.netlify.app/"> Netlify</a>
+          <a
+            href="https://weatherfourcast.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            Netlify
+          </a>
         </footer>
       </div>
     </div>
