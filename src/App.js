@@ -19,7 +19,7 @@ function App() {
           </a>{" "}
           app available at
           <a
-            href="https://weatherfourcast.netlify.app/"
+            href="https://mqhele-react-weather.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
