@@ -1,15 +1,19 @@
 .WeatherForecast {
-  text-align: center;
   font-size: 14px;
-  margin: 40px auto;
+  margin: 20px auto;
   border-top: 1px solid var(--secondary-color);
-  padding-top: 30px;
+  padding-top: 20px;
+  text-align: center;
 }
 .WeatherForecast .forecastDay {
   font-weight: 500;
 }
 .WeatherForecast .temperature-min {
-  opacity: 0.7;
   margin-left: 5px;
   color: var(--tertiary-color);
+}
+@media (max-width: 576px) {
+  .WeatherForecast {
+    margin: 0 auto 20px;
+  }
 }
