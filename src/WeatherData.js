@@ -10,15 +10,15 @@ export default function WeatherData(props) {
       <div className="row text-capitalize">
         <div className="col-sm-6">
           <h1>{props.info.city}</h1>
-          <p>
+          <div>
             <UpdateDate date={props.info.date} />
             {props.info.description} <br />
             Wind: <strong>{Math.round(props.info.wind)}km/hr</strong> |
             Humidity: <strong>{props.info.humidity}%</strong>
-          </p>
+          </div>
         </div>
         <div className="temperature col-sm-6 d-flex justify-content-end">
-          <span class="icon">
+          <span className="icon">
             <WeatherIcon code={props.info.icon} size={50} color="#00204a" />
           </span>
           <span>
