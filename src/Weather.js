@@ -33,7 +33,6 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
     });
-    console.log(response);
   }
   let form = (
     <div className="Weather">
