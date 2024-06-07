@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./WeatherForecast.css";
 import WeatherForecastDay from "./WeatherForecastDay.js";
-
+import { Puff } from "react-loader-spinner";
 import axios from "axios";
 
 export default function WeatherForecast(props) {
@@ -43,6 +43,18 @@ export default function WeatherForecast(props) {
     let longitude = props.coordinates.lon;
     let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
     axios.get(url).then(handleResponse);
-    // return null;
+    return (
+      <div className="loader d-flex justify-content-center">
+        <Puff
+          visible={true}
+          height="80"
+          width="80"
+          color="#00204A"
+          ariaLabel="puff-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+        />
+      </div>
+    );
   }
 }

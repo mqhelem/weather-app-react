@@ -10,12 +10,12 @@
 }
 .WeatherForecast .temperature-min {
   margin-left: 5px;
-  color: var(--tertiary-color);
+  color: var(--primary-color);
 }
 
 @media (max-width: 576px) {
   .WeatherForecast {
     margin: 0 auto 20px;
-    font-size: 12px;
+    font-size: 10px;
   }
 }

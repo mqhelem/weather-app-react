@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #da6a00;
+  --primary-color: #ff5722;
   --secondary-color: #00204a;
   --tertiary-color: #fdb44b;
 }
@@ -36,6 +36,7 @@ footer a {
   .App {
     text-align: center;
     margin: 25px auto;
+    padding: 40px 10px;
   }
   .App .btn {
     margin: 25px auto 0;
