@@ -3,6 +3,9 @@
   --secondary-color: #00204a;
   --tertiary-color: #fdb44b;
 }
+body {
+  background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
+}
 .App {
   border: 1px solid var(--secondary-color);
   border-radius: 30px;
